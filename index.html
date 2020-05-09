@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="index.js"></script>
+</head>
+
+<style>
+    html, body, canvas {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    #configuration {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    #lastPressed {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+</style>
+
+<body>
+    <details id="configuration">
+        <summary>Configuration</summary>
+        <form>
+            <!-- dimensions -->
+            <label for="dimX">Dimension X</label>
+            <br>
+            <input id="dimX"
+                   name="dimX"
+                   type="number"
+                   min="1"
+                   max="100"
+                   step="1"
+                   value="10">
+            <br>
+            <label for="dimY">Dimension Y</label>
+            <br>
+            <input id="dimY"
+                   name="dimY"
+                   type="number"
+                   min="1"
+                   max="100"
+                   step="1"
+                   value="10">
+            <br>
+            <br>
+            <!-- start position -->
+            <label for="startX">Start X</label>
+            <br>
+            <input id="startX"
+                   name="startX"
+                   type="number"
+                   min="0"
+                   max="0"
+                   step="1"
+                   value="0">
+            <br>
+            <label for="startY">Start Y</label>
+            <br>
+            <input id="startY"
+                   name="startY"
+                   type="number"
+                   min="0"
+                   max="0"
+                   step="1"
+                   value="0">
+            <br>
+            <br>
+            <label for="moveUp">Key to move up:</label>
+            <br>
+            <button id="moveUp">ArrowUp</button>
+            <br>
+            <br>
+            <label for="moveDown">Key to move down:</label>
+            <br>
+            <button id="moveDown">ArrowDown</button>
+            <br>
+            <br>
+            <label for="moveLeft">Key to move left:</label>
+            <br>
+            <button id="moveLeft">ArrowLeft</button>
+            <br>
+            <br>
+            <label for="moveRight">Key to move right:</label>
+            <br>
+            <button id="moveRight">ArrowRight</button>
+        </form>
+    </details>
+    <p id="lastPressed"></p>
+    <canvas id="canvas"></canvas>
+</body>
